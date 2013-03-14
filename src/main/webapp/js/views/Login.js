@@ -5,9 +5,8 @@ define([
     'app',
     'appLayout',
     'router',
-    'coffee',
     'text!bennuTemplates/Login.html'
-], function($, Mustache, Backbone, App, AppLayout, Router, Coffee, tpl) {
+], function($, Mustache, Backbone, App, AppLayout, Router,tpl) {
 
     return Backbone.Marionette.CompositeView.extend({
 
@@ -22,7 +21,7 @@ define([
             var username = $('input[name=username]', this.el).val();
             var password = $('input[name=password]', this.el).val();
             if(username === "" || password === "") {
-                Coffee.showError("You must fill your credentials");
+                App.showError("You must fill your credentials");
             } else {
                 $.post('api/login', { username: username, password: password }).done(
                     function() {
