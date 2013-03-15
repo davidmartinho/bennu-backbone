@@ -6,7 +6,7 @@ define([
     'appLayout',
     'router',
     'text!bennuTemplates/Login.html'
-], function($, Mustache, Backbone, App, AppLayout, Router,tpl) {
+], function($, Mustache, Backbone, App, AppLayout, Router, tpl) {
 
     return Backbone.Marionette.CompositeView.extend({
 
